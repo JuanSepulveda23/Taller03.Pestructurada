@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int op=0;
+  int viu,hij,hij2;
+cout<<"Cuantos hijos tiene?: ";
+  cin>>hij;
+cout<<"Cuantos de sus hijos estan en edad escolar?: ";
+  cin>>hij2;
+if (hij2>hij){
+  cout<<"Ingrese adecuadamente la cantidad de hijos"<<endl;
+} else {cout<<"SI(1)---NO(2)"<<endl;
+cout<<"Es usted un mujer viuda?: ";
+  cin>>viu;
+if (hij>0 && hij<=2){
+  op=op+70000;
+} else if (hij>2 && hij<=5){
+  op=op+90000;
+} else if (hij>=6){
+  op=op+120000;
+} op=(op+(10000*hij2));
+if (viu==1){
+  op=op+20000;
+} else{
+  op=op+0;
+}
+cout<<"El subsidio que le corresponde es de: "<<op <<" pesos";
+return 0;
+}}

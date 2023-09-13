@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int i,min,seg,hors,mins,segs;
+  for(i=1;i<=2;i++){
+    cout<<"Tiempos de la carrera"<<endl;
+    cout<<"Ingrese los minutos del atleta numero "<<i <<endl;
+    cin>>min;
+    cout<<"Ingrese los segundos del atleta numero "<<i <<endl;
+    cin>>seg;
+    hors= (min/60) + (seg/3600);
+    mins= (seg/60) + min;
+    segs= (min*60) + seg;
+    cout<<"El tiempo que duró el atleta numero "<<i <<" fue de: "<<endl;
+    cout<<"Horas: "<<hors <<endl; 
+    cout<<"Minutos: "<<mins <<endl;
+    cout<<"Segundos: "<<segs <<endl;
+    }
+return 0;
+}

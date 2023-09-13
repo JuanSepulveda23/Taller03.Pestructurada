@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main() {
+  char ty;
+  double n1, n2, r;
+  int i=1;
+  while(i==1){
+    cout << "Que operación desea hacer" <<endl;
+    cout <<"suma(+) - resta(-) - multiplicación(*) - division(/): ";
+    cin >> ty;
+    while (ty!='+'&& ty!='-'&& ty!='*'&& ty!='/'){
+      cout << "Ingrese una operación valida" << endl;
+      cout << "Que operación desea hacer" <<endl;
+      cout <<"suma(+) - resta(-) - multiplicación(*) - division(/): ";
+      cin >> ty;
+    }
+    cout << "Ingresa el 1er número: ";
+    cin >> n1;
+    cout << "Ingresa el 2do número: ";
+    cin >> n2;
+    if (ty == '+') {
+      r = (n1 + n2);
+      cout<<"El resultado de la operacion es: "<<r;
+    }else if(ty == '-') {
+      r = (n1 - n2);
+      cout<<"El resultado de la operacion es: "<<r;
+    }else if(ty == '*') {
+      r = (n1 * n2);
+      cout<<"El resultado de la operacion es: "<<r;
+    }else if (ty == '/') {
+      if (n2 == 0) {
+        cout << "Division entre 0 es invalida" << endl;
+      } else{
+        r = (n1 / n2);
+        cout<<"El resultado de la operacion es: "<<r;
+      } cout<<"Desea hacer otra operación?";
+      cout<<"SI(1)---NO(2)";
+      cin>>i;
+    }
+  }  
+}

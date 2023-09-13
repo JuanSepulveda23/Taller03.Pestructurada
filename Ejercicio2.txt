@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+  float pies,metros,pulgadas,yardas,millas;
+  cout<<"Ingrese una distancia en pies y una en metros para ser sumadas"<<endl;
+  cout<<"Pies: ";
+  cin>>pies;
+  cout<<"Metros: ";
+  cin>>metros;
+  pulgadas=(pies*12) + (metros*39.3701);
+  yardas=(pulgadas/36);
+  metros=(pulgadas/39.3701);
+  millas=(metros/1609.34);
+  cout<<"La distancia total entre pies y metros es: "<<pulgadas <<" pulgadas" <<endl;
+  cout<<"La distancia total entre pies y metros es: "<<yardas <<" yardas" <<endl;
+  cout<<"La distancia total entre pies y metros es: "<<metros <<" metros" <<endl;
+  cout<<"La distancia total entre pies y metros es: "<<millas <<" millas" <<endl;
+return 0;
+}

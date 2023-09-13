@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int maxDistance(vector<int>& dist, int Dtotal, int ciudades) {
+    int n = dist.size();
+    vector<vector<vector<int>>> dp(n + 1, vector<vector<int>>(ciudades + 1, vector<int>(Dtotal + 1, 0)));
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= ciudades; j++) {
+            for (int k = 1; k <= Dtotal; k++) {
+                if (dist[i - 1] <= k) {
+                    dp[i][j][k] = max(dp[i - 1][j][k], dp[i - 1][j - 1][k - dist[i - 1]] + dist[i - 1]);
+                } else {
+                    dp[i][j][k] = dp[i - 1][j][k];
+                }
+            }
+        }
+    }
+    return dp[n][ciudades][Dtotal];
+}
+int main() {
+    vector<int> dist = {50, 55, 57, 58, 60};
+    int Dtotal = 174;
+    int ciudades = 3;
+    int result = maxDistance(dist, Dtotal, ciudades);
+    cout << "La suma máxima de distancias es: " << result << endl;
+    return 0;
+}
